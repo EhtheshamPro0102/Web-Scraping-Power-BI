@@ -1,5 +1,5 @@
 ## UAE Foodie Dashboard
-### Webscaping -Talabat-data-with-python-selenium and Visualization with Power-Bi
+### WebScraping -Talabat-data-with-python-selenium and Visualization with Power-Bi
 Discover the UAE's top dining options with insights extracted from Talabat, a leading online food delivery platform. This interactive dashboard showcases highly rated restaurants, their best-selling dishes, delivery locations, and diverse cuisines to help you find your next favorite meal effortlessly.
 
 Data sourced from - [talabat.com/uae/restaurants](https://www.talabat.com/uae/restaurants)
@@ -17,5 +17,45 @@ This project blends technology, creativity, and data storytelling to uncover tre
 
 **[Dashboard Link](https://shorturl.at/tTxyP)**
 
+#### Data Extraction Using Selenium from Talabat UAE
+The task was to scrape restaurant details from the Talabat UAE website using Selenium, a powerful tool for web automation. The goal was to visit multiple restaurant pages, gather their ratings, cuisine types, and descriptions, and store the data for further analysis. Here's how I approached it and the key Selenium functions used to achieve this.
+The process started by setting up the Chrome WebDriver through the Service function. This is essentially what allows Selenium to automate the Chrome browser on my machine. I used the driver.get() function to open the Talabat website and start the data extraction process. The website lists restaurants on multiple pages, so I needed to handle pagination and ensure the script could move through several pages to fetch more data.
+Here I mainly used **XPATH** function in webpage to locate specific elements in webpage.
+
+And futher I used the find_elements(By.XPATH) method to locate all the restaurant links on the page. This step was crucial because it identified the clickable links for each restaurant, allowing me to navigate to their individual pages. To ensure smooth scrolling (as some elements were out of view), I used execute_script(), which is a neat trick to scroll down to a specific restaurant before clicking on it.
+
+After opening a restaurant's page, I applied WebDriverWait to make sure all elements like the restaurant's name, rating, and description were fully loaded before attempting to extract the information. This is an important step because websites often load content dynamically, and rushing through can result in missed data or errors. I also used regular expressions (re.search()) to extract numeric ratings from the text and clean up the cuisine information. The extracted details were then added to a list for later use.
+
+One of the main challenges was handling errors gracefully. For example, if a restaurant's page didn't load properly or showed a "Page Not Found" error, the script handled it by navigating back to the main page and continuing with the next restaurant. This was done using try-except blocks, which ensure that the script doesn't crash when it encounters an issue. Additionally, I used driver.back() to return to the previous page and continue from where it left off.
+
 **Note:** The information reflects data from Talabat.com as of January 2025. It does not represent all UAE restaurants or top- ranked restaurants but is based on the limited extracted data from the website for this project.
+
+
+
+
+
+
+### **Assignment Submission: Data Extraction Using Selenium from Talabat UAE**  
+
+For this assignment, the task was to scrape restaurant details from the **Talabat UAE website** using **Selenium**, a powerful tool for web automation. The goal was to visit multiple restaurant pages, gather their ratings, cuisine types, and descriptions, and store the data for further analysis. Here's how I approached it and the key Selenium functions used to achieve this.
+
+The process started by setting up the **Chrome WebDriver** through the `Service` function. This is essentially what allows Selenium to automate the Chrome browser on my machine. I used the **`driver.get()`** function to open the Talabat website and start the data extraction process. The website lists restaurants on multiple pages, so I needed to handle pagination and ensure the script could move through several pages to fetch more data.
+
+Once the page loaded, I used the **`find_elements(By.XPATH)`** method to locate all the restaurant links on the page. This step was crucial because it identified the clickable links for each restaurant, allowing me to navigate to their individual pages. To ensure smooth scrolling (as some elements were out of view), I used **`execute_script()`**, which is a neat trick to scroll down to a specific restaurant before clicking on it.
+
+After opening a restaurant's page, I applied **WebDriverWait** to make sure all elements like the restaurant's name, rating, and description were fully loaded before attempting to extract the information. This is an important step because websites often load content dynamically, and rushing through can result in missed data or errors. I also used regular expressions (`re.search()`) to extract numeric ratings from the text and clean up the cuisine information. The extracted details were then added to a list for later use.
+
+One of the main challenges was handling errors gracefully. For example, if a restaurant's page didn't load properly or showed a "Page Not Found" error, the script handled it by navigating back to the main page and continuing with the next restaurant. This was done using **try-except blocks**, which ensure that the script doesn't crash when it encounters an issue. Additionally, I used **`driver.back()`** to return to the previous page and continue from where it left off.
+
+Another challenge was dealing with pagination. After processing each page, I used **`find_element()`** to locate the "Next" button and clicked on it to move to the next set of restaurants. To make sure the next page loaded completely, I used **explicit waits** with **`EC.element_to_be_clickable()`**, ensuring the script didn't proceed until the "Next" button was interactable.
+
+Overall, the key Selenium functions that played a big role in this project were:
+- **`driver.get()`** to open the website.
+- **`find_elements(By.XPATH)`** to locate multiple web elements on a page.
+- **`execute_script()`** to scroll into view for hidden elements.
+- **`click()`** to interact with clickable items.
+- **WebDriverWait** to wait for elements to load.
+- **`driver.back()`** to return to the previous page.
+
+This project taught me the importance of handling dynamic content on websites and the need for error handling when web scraping. It’s not just about writing code to extract data but also making sure the script is robust enough to deal with unexpected changes and errors during the process.
 
