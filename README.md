@@ -17,7 +17,10 @@ This project blends technology, creativity, and data storytelling to uncover tre
 
 **[Dashboard Link](https://shorturl.at/tTxyP)**
 
-#### **Data Extraction Using Selenium from Talabat UAE**
+**Note:** The information reflects data from Talabat.com as of January 2025. It does not represent all UAE restaurants or top- ranked restaurants but is based on the limited extracted data from the website for this project.
+
+
+### **Data Extraction Using Selenium from Talabat UAE**
 The task was to scrape restaurant details from the Talabat UAE website using Selenium, a powerful tool for web automation. The goal was to visit multiple restaurant pages, gather their ratings, cuisine types, and descriptions, and store the data for further analysis. Here's how I approached it and the key Selenium functions used to achieve this.
 The process started by setting up the **Chrome WebDriver** through the `Service` function. This is essentially what allows Selenium to automate the Chrome browser on my machine. I used the **`driver.get()`** function to open the Talabat website and start the data extraction process. The website lists restaurants on multiple pages, so I needed to handle pagination and ensure the script could move through several pages to fetch more data.
 Here I mainly used **XPATH** function in webpage to locate specific elements in webpage.
@@ -38,6 +41,4 @@ Overall, the key Selenium functions that played a big role in this project were:
 - **WebDriverWait** to wait for elements to load.
 - **`driver.back()`** to return to the previous page.
 
-
-**Note:** The information reflects data from Talabat.com as of January 2025. It does not represent all UAE restaurants or top- ranked restaurants but is based on the limited extracted data from the website for this project.
 
