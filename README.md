@@ -2,6 +2,8 @@
 ### Webscaping -Talabat-data-with-python-selenium and Visualization with Power-Bi
 Discover the UAE's top dining options with insights extracted from Talabat, a leading online food delivery platform. This interactive dashboard showcases highly rated restaurants, their best-selling dishes, delivery locations, and diverse cuisines to help you find your next favorite meal effortlessly.
 
+Data sourced from - ![talabat.com/uae/restaurants](talabat.com/uae/restaurants)
+
 This project blends technology, creativity, and data storytelling to uncover trends and insights in the vibrant restaurant landscape of the UAE. 
 - ⚙️ **Data Source**: Scraped from Talabat UAE using Python Selenium.
 - 🧹 **Data Preparation**: Processed and cleaned with Python Pandas and Excel.
