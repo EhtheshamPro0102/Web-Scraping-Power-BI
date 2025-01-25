@@ -2,9 +2,9 @@
 ### WebScraping -Talabat-data-with-python-selenium and Visualization with Power-Bi
 Discover the UAE's top dining options with insights extracted from Talabat, a leading online food delivery platform. This interactive dashboard showcases highly rated restaurants, their best-selling dishes, delivery locations, and diverse cuisines to help you find your next favorite meal effortlessly.
 
-**Problem statement** : Web Scrape restaurant names their ratings, reviews, cuisines, best-selling dishes, and delivery locations in the UAE from Talabat.com to provide actionable insights and enabling users to explore and help in dining decisions in a seamless and interactive manner ?
+**`Problem statement`** : Web Scrape restaurant names their ratings, reviews, cuisines, best-selling dishes, and delivery locations in the UAE from Talabat.com to provide actionable insights and enabling users to explore and help in dining decisions in a seamless and interactive manner ?
 
-**My approach** : I used the Selenium package to web scrape restaurant details from the website (detailed approach explained below). The extracted data was initially unstructured and largely textual, so I utilized regular expressions to parse and extract specific information, such as cuisines, best-selling dishes, and delivery locations, ensuring it was suitable for dashboard creation After cleaning and transforming the data, I saved it in an Excel file and built an interactive Power BI dashboard. By using advanced DAX functions and combining custom visuals through SVG classes, Ito make it impactful.
+**`My approach`** : I used the Selenium package to web scrape restaurant details from the website (detailed approach explained below). The extracted data was initially unstructured and largely textual, so I utilized regular expressions to parse and extract specific information, such as cuisines, best-selling dishes, and delivery locations, ensuring it was suitable for dashboard creation After cleaning and transforming the data, I saved it in an Excel file and built an interactive Power BI dashboard. By using advanced DAX functions and combining custom visuals through SVG classes, Ito make it impactful.
 
 Data sourced from - [talabat.com/uae/restaurants](https://www.talabat.com/uae/restaurants)
 
